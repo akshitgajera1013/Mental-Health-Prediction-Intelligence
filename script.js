@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         try {
             // Note: Update URL if hosted elsewhere. CORS must be configured on FastAPI server.
-            const response = await fetch('https://mental-health-prediction-intelligence-2.onrender.com', {
+            const response = await fetch('https://mental-health-prediction-intelligence-2.onrender.com/predict', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
