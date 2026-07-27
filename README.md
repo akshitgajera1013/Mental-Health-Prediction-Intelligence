@@ -7,6 +7,9 @@
 ![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)
 
 
+Deployment Link :- https://mental-health-prediction-intelligence-3.onrender.com/#hero
+FastAPi Backedn Link :- https://mental-health-prediction-intelligence-2.onrender.com/docs
+
 #UI
 ![Output](images/1.png)
 
