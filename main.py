@@ -3,8 +3,17 @@ import pandas as pd
 from pydantic import BaseModel,Field
 from typing import Literal
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 
 app=FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=['*'],
+    allow_credentials=['*'],
+    allow_methods=['*'],
+    allow_headers=['*']
+)
 
 model=joblib.load('xgboost_mental_health_prediction_pipeline.pkl')
 
