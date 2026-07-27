@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura | AI Mental Health Analysis</title>
+    
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Animated Background Blobs -->
+    <div class="bg-shape bg-primary"></div>
+    <div class="bg-shape bg-accent"></div>
+
+    <!-- Navigation -->
+    <nav class="glass-nav">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <i class="fas fa-brain gradient-text"></i> Aura
+            </a>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#predict">Predict</a></li>
+                <li><a href="#about">About AI</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+            <a href="https://github.com" target="_blank" class="btn btn-outline" aria-label="GitHub Repository">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="hero" class="hero-section">
+        <div class="container hero-content">
+            <div class="hero-text fade-in-up">
+                <div class="badge">
+                    <i class="fas fa-sparkles"></i> Powered by XGBoost AI
+                </div>
+                <h1>Advanced <span class="gradient-text">Mental Health</span> Prediction Intelligence</h1>
+                <p>Leverage cutting-edge machine learning to identify early signs of depression based on lifestyle, academic, and behavioral metrics.</p>
+                <a href="#predict" class="btn btn-primary btn-large">
+                    Start Analysis <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            <div class="hero-illustration float-anim">
+                <!-- Abstract AI Brain Representation -->
+                <div class="brain-sphere">
+                    <div class="ring ring-1"></div>
+                    <div class="ring ring-2"></div>
+                    <div class="ring ring-3"></div>
+                    <i class="fas fa-network-wired core-icon"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Prediction Form Section -->
+    <section id="predict" class="predict-section container">
+        <div class="glass-card form-card slide-up">
+            <div class="card-header">
+                <h2>Health Metrics Input</h2>
+                <p>Provide accurate data for the highest prediction confidence.</p>
+            </div>
+
+            <form id="prediction-form" novalidate>
+                <div class="form-grid">
+                    
+                    <!-- Age -->
+                    <div class="form-group float-label-group">
+                        <i class="fas fa-calendar-alt input-icon"></i>
+                        <input type="number" id="age" name="age" min="13" max="100" required placeholder=" ">
+                        <label for="age">Age</label>
+                        <span class="error-text">Please enter a valid age.</span>
+                    </div>
+
+                    <!-- Gender -->
+                    <div class="form-group float-label-group">
+                        <i class="fas fa-venus-mars input-icon"></i>
+                        <select id="gender" name="gender" required>
+                            <option value="" disabled selected hidden></option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                        <label for="gender">Gender</label>
+                    </div>
+
+                    <!-- Social Media Hours -->
+                    <div class="form-group range-group">
+                        <div class="range-header">
+                            <label for="daily_social_media_hours"><i class="fas fa-mobile-alt"></i> Daily Social Media</label>
+                            <span class="range-value" id="val-sm-hours">5 hrs</span>
+                        </div>
+                        <input type="range" id="daily_social_media_hours" name="daily_social_media_hours" min="0" max="24" step="0.5" value="5">
+                    </div>
+
+                    <!-- Platform Usage -->
+                    <div class="form-group float-label-group">
+                        <i class="fas fa-hashtag input-icon"></i>
+                        <select id="platform_usage" name="platform_usage" required>
+                            <option value="" disabled selected hidden></option>
+                            <option value="Instagram">Instagram</option>
+                            <option value="TikTok">TikTok</option>
+                            <option value="Both">Both</option>
+                        </select>
+                        <label for="platform_usage">Primary Platform</label>
+                    </div>
+
+                    <!-- Sleep Hours -->
+                    <div class="form-group range-group">
+                        <div class="range-header">
+                            <label for="sleep_hours"><i class="fas fa-bed"></i> Sleep Hours</label>
+                            <span class="range-value" id="val-sleep">6.5 hrs</span>
+                        </div>
+                        <input type="range" id="sleep_hours" name="sleep_hours" min="0" max="18" step="0.5" value="6.5">
+                    </div>
+
+                    <!-- Screen Time Before Sleep -->
+                    <div class="form-group range-group">
+                        <div class="range-header">
+                            <label for="screen_time_before_sleep"><i class="fas fa-moon"></i> Screen Time Before Sleep</label>
+                            <span class="range-value" id="val-screen-sleep">3 hrs</span>
+                        </div>
+                        <input type="range" id="screen_time_before_sleep" name="screen_time_before_sleep" min="0" max="10" step="0.5" value="3">
+                    </div>
+
+                    <!-- Academic Performance -->
+                    <div class="form-group range-group">
+                        <div class="range-header">
+                            <label for="academic_performance"><i class="fas fa-graduation-cap"></i> Academic Performance (0-10)</label>
+                            <span class="range-value" id="val-academic">7</span>
+                        </div>
+                        <input type="range" id="academic_performance" name="academic_performance" min="0" max="10" step="0.5" value="7">
+                    </div>
+
+                    <!-- Physical Activity -->
+                    <div class="form-group range-group">
+                        <div class="range-header">
+                            <label for="physical_activity"><i class="fas fa-running"></i> Physical Activity (0-10)</label>
+                            <span class="range-value" id="val-physical">2</span>
+                        </div>
+                        <input type="range" id="physical_activity" name="physical_activity" min="0" max="10" step="0.5" value="2">
+                    </div>
+
+                    <!-- Social Interaction Level -->
+                    <div class="form-group float-label-group">
+                        <i class="fas fa-users input-icon"></i>
+                        <select id="social_interaction_level" name="social_interaction_level" required>
+                            <option value="" disabled selected hidden></option>
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">High</option>
+                        </select>
+                        <label for="social_interaction_level">Social Interaction</label>
+                    </div>
+
+                    <!-- Stress Level -->
+                    <div class="form-group range-group">
+                        <div class="range-header">
+                            <label for="stress_level"><i class="fas fa-bolt"></i> Stress Level (0-10)</label>
+                            <span class="range-value" id="val-stress">8</span>
+                        </div>
+                        <input type="range" id="stress_level" name="stress_level" min="0" max="10" step="1" value="8">
+                    </div>
+
+                    <!-- Anxiety Level -->
+                    <div class="form-group range-group">
+                        <div class="range-header">
+                            <label for="anxiety_level"><i class="fas fa-wind"></i> Anxiety Level (0-10)</label>
+                            <span class="range-value" id="val-anxiety">7</span>
+                        </div>
+                        <input type="range" id="anxiety_level" name="anxiety_level" min="0" max="10" step="1" value="7">
+                    </div>
+
+                    <!-- Addiction Level -->
+                    <div class="form-group range-group">
+                        <div class="range-header">
+                            <label for="addiction_level"><i class="fas fa-link"></i> Addiction Level (0-10)</label>
+                            <span class="range-value" id="val-addiction">6</span>
+                        </div>
+                        <input type="range" id="addiction_level" name="addiction_level" min="0" max="10" step="1" value="6">
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" id="submit-btn" class="btn btn-primary btn-large btn-glow ripple">
+                        <span class="btn-text">Run AI Diagnostics</span>
+                        <i class="fas fa-microchip btn-icon"></i>
+                        <div class="spinner hidden"></div>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Result Modal / Overlay -->
+    <div id="result-overlay" class="hidden">
+        <div class="glass-card result-card scale-in" id="result-content">
+            <button class="close-modal" id="close-result" aria-label="Close">&times;</button>
+            
+            <div class="result-icon-wrapper" id="result-icon-container">
+                <!-- Injected via JS -->
+            </div>
+            
+            <h2 id="result-title">Analyzing...</h2>
+            <p id="result-message" class="result-subtitle"></p>
+
+            <div class="chart-container">
+                <div class="circular-progress" id="risk-meter">
+                    <div class="inner-circle">
+                        <span id="risk-percentage">0%</span>
+                    </div>
+                </div>
+                <p class="chart-label">AI Confidence Score</p>
+            </div>
+
+            <div id="action-steps" class="action-steps hidden">
+                <h3>Recommended Steps</h3>
+                <ul>
+                    <li><i class="fas fa-phone-alt"></i> Consider consulting a licensed mental health professional.</li>
+                    <li><i class="fas fa-heart"></i> Reach out to trusted friends or family members.</li>
+                    <li><i class="fas fa-book-medical"></i> Limit screen time before bed to improve sleep hygiene.</li>
+                </ul>
+                <div class="emergency-contact">
+                    <strong>Emergency Helpline:</strong> 988 (Crisis Lifeline)
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confetti Container for Success -->
+    <div id="confetti-container"></div>
+
+    <!-- Toast Notifications Container -->
+    <div id="toast-container"></div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="brand">
+                <a href="#" class="logo"><i class="fas fa-brain"></i> Aura AI</a>
+                <p>Empowering mental wellness through machine learning.</p>
+            </div>
+            <div class="links">
+                <a href="https://github.com" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2026 Senior Developer. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
