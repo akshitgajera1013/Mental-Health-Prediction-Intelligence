@@ -36,7 +36,7 @@ class Depression(BaseModel):
      depression : int 
 
 
-@app.post('predict',response_model=Depression)
+@app.post('/predict',response_model=Depression)
 def predict(data:StudentFeature):
     input_raw=pd.DataFrame([{
             'age' : data.age,
