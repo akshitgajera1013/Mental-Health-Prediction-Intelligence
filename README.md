@@ -11,13 +11,6 @@ Deployment Link :- https://mental-health-prediction-intelligence-3.onrender.com/
 
 FastAPi Backedn Link :- https://mental-health-prediction-intelligence-2.onrender.com/docs
 
-#UI
-![Output](images/1.png)
-
-![Output](images/2.png)
-
-![Output](images/3.png)
-
 
 A cutting-edge, machine learning-powered web application that analyzes behavioral, academic, and lifestyle metrics to predict the likelihood of depression. Built with a lightning-fast **FastAPI backend (XGBoost)** and a premium, modern **Glassmorphism frontend**.
 
@@ -51,9 +44,9 @@ A cutting-edge, machine learning-powered web application that analyzes behaviora
 
 ## 📸 Application Previews
 
-*(Replace these placeholder links with actual screenshots of your application)*
 
-| Hero Section | Prediction Dashboard | Diagnostic Result |
+|![Output](images/1.png) | ![Output](images/2.png) | 
+![Output](images/3.png) |
 | :---: | :---: | :---: |
 | <img src="https://via.placeholder.com/400x250.png?text=Hero+Section" alt="Hero Section"> | <img src="https://via.placeholder.com/400x250.png?text=Dashboard" alt="Dashboard"> | <img src="https://via.placeholder.com/400x250.png?text=Result+Card" alt="Result Card"> |
 
