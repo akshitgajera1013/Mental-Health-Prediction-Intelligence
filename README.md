@@ -45,9 +45,7 @@ A cutting-edge, machine learning-powered web application that analyzes behaviora
 ## 📸 Application Previews
 
 
-
-| ![Output](images/1.png)  | ![Output](images/2.png) | ![Output](images/3.png)  |
-| <img src="https://via.placeholder.com/400x250.png?text=Hero+Section" alt="Hero Section"> | <img src="https://via.placeholder.com/400x250.png?text=Dashboard" alt="Dashboard"> | <img src="https://via.placeholder.com/400x250.png?text=Result+Card" alt="Result Card"> |
+| <img src=![Output](images/1.png)  alt="Hero Section"> | <img src=| ![Output](images/2.png) alt="Dashboard"> | <img src= ![Output](images/3.png) alt="Result Card"> |
 
 ---
 
